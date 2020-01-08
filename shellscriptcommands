@@ -26,7 +26,10 @@ Bash = Bourne Again Shell.
 
 
 #!/bin/sh
+useradd ganesh
+mkdir -p /home/ganesh/logfiles
 cd /home/ganesh/logfiles
+touch program.log.6 program.log.5 program.log.4 program.log.3 program.log.2 program.log.1 program.log
 rm program.log.6
 mv program.log.5 program.log.6
 mv program.log.4 program.log.5
@@ -147,6 +150,9 @@ In addition to the setting environmental items the /etc/profile will execute the
 
 .bashrc file in your home directory. This file is meant for setting command aliases and functions used by bash shell users.
  The /etc/bashrc is setting command aliases  in system wide 
+
+echo "export AS='name'" > /etc/profile.d/tom.sh
+
 
 
 conditional code
